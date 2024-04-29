@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(168, 148, 148, 0.2);
+
+
+
+  .center {
+    min-width: 30%;
+    min-height: 65%;
+
+    background-color: black;
+    box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 15px;
+
+
+    .clockwise {
+      background-color: antiquewhite;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: left center;
+      rotate: -90deg;
+    }
+
+    .hour {
+      width: 30%;
+      background-color: red;
+    }
+
+    .minute {
+      width: 35%;
+      background-color: green;
+    }
+
+    .second {
+      background-color: blue;
+      width: 40%;
+    }
+  }
+
+  .clockParent {
+    display: flex;
+    gap: 10px;
+    font-size: 400%;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .fullTime {
+    font-size: 200%;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .parent {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    .center {
+      min-width: 80%;
+      min-height: 50%;
+    }
+
+  }
+
+}
